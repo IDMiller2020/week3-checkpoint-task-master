@@ -1,0 +1,52 @@
+
+For this checkpoint students will be responsible for creating a task manager, where 
+users can create multiple lists each with multiple items to complete on that list.
+
+Goals
+Students will demonstrate their understanding of the MVC Design pattern by completing this 
+process utilizing services, controllers and models. In addition students will be able to 
+persist data into local storage that will be retrieved on page refresh.
+
+The Setup
+Step 1
+It may be beneficial to draw out a template of both the page layout, and the processes 
+that will be needed for each part to work as anticipated. Use this template as you are writing
+code to better focus your efforts on what you may or may not need to achieve your goals.
+
+Step 2
+Dive right into the coding, it doesn't matter which step below you do first however 
+the following is a broad scope of the things that need to be done:
+
+Create a data model for what your list is, and the properties you need on it. This should 
+at least include a title, and a color.
+Generate the HTML needed to create a new list
+In your controller capture the form submission and pass the data to your service, ensure 
+the page does not reload.
+Your service is responsible to turn your raw data into a List class object, and 
+put it in the state (REMINDER: You will also want to make sure this gets saved in your local storage)
+Write the needed function to render your list to the screen.
+Repeat a similar process for deleting a list and creating and deleting Tasks
+Figma Reference (https://www.figma.com/proto/KW12Zucoq79ic1KZh14T0b/TaskMaster?node-id=1%3A11&scaling=min-zoom)
+
+Requirements:
+All lists and tasks are rendered on load/reload
+Lists are displayed out in columns across the page
+Lists can be Created
+Lists and tasks each have a delete button
+List creation must include a title limited to 3-15 characters
+List creation must include a color picker or minimum 5 different colors
+Lists include a count of all tasks compared to uncompleted tasks
+Each List must have its own Task form
+Task title/body must be between 3-50 characters
+Tasks can be marked complete, this will persist on reload (checked attribute)
+Forms should not submit unless the fields adhere to the requirements
+Lists can be Deleted
+Tasks can be Deleted (separate from being marked complete)
+Users are prompted to confirm any delete (search window.confirm)
+All Data persists through local storage
+Stretch Goals:
+Use something like masonry to render the lists more elegantly
+Use a better popup then window.confirm for a more clean user experience (see the SweetAlertJS 
+documentation for ideas on this)
+Play with the styling on 'completed' tasks to include a strikethrough
+Add Toast notifications to encourage completed tasks
