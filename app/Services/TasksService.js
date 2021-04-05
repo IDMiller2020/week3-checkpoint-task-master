@@ -5,11 +5,23 @@ import { saveState } from "../Utils/LocalStorage.js"
 class TasksService {
   addTask(newTask) {
     ProxyState.tasks.push(new Task(newTask.text, newTask.listId))
+    ProxyState.lists.forEach(l => {
+      if(l.id === newTask.listId) {
+        l.listLength++
+      }
+    })
     saveState()
     ProxyState.tasks = ProxyState.tasks
   }
-  deleteTask(id) {
+  deleteTask(id, listId) {
     if (window.confirm("Are you sure you want to delete this task?")) {
+      ProxyState.lists.forEach(l => {
+        console.log(l.id)
+        console.log(id)
+        if(l.id === listId) {
+          l.listLength--
+        }
+      })
       ProxyState.tasks = ProxyState.tasks.filter(t => t.id !== id)
       saveState()
     }

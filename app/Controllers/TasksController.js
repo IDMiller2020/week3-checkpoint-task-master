@@ -20,8 +20,8 @@ export default class TasksController {
     form.reset()
   }
 
-  deleteTask(id) {
-    tasksService.deleteTask(id)
+  deleteTask(id, listId) {
+    tasksService.deleteTask(id, listId)
   }
   checked(listId, id) {
     console.log('Checkbox Clicked (TasksController)')
