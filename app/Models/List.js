@@ -11,7 +11,7 @@ export default class List {
 
   get Template() {
     return `
-    <div class="col"
+    <div class="col-4"
       <div class="card mb-3">
         <div class="card-header text-white bg-${this.color} d-flex justify-content-between">
             <div class="d-flex align-items-center">
