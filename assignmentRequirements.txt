@@ -17,33 +17,34 @@ Step 2
 Dive right into the coding, it doesn't matter which step below you do first however 
 the following is a broad scope of the things that need to be done:
 
-Create a data model for what your list is, and the properties you need on it. This should 
+- Create a data model for what your list is, and the properties you need on it. This should 
 at least include a title, and a color.
-Generate the HTML needed to create a new list
-In your controller capture the form submission and pass the data to your service, ensure 
+- Generate the HTML needed to create a new list
+- In your controller capture the form submission and pass the data to your service, ensure 
 the page does not reload.
-Your service is responsible to turn your raw data into a List class object, and 
+- Your service is responsible to turn your raw data into a List class object, and 
 put it in the state (REMINDER: You will also want to make sure this gets saved in your local storage)
-Write the needed function to render your list to the screen.
-Repeat a similar process for deleting a list and creating and deleting Tasks
+- Write the needed function to render your list to the screen.
+-Repeat a similar process for deleting a list and creating and deleting Tasks
 Figma Reference (https://www.figma.com/proto/KW12Zucoq79ic1KZh14T0b/TaskMaster?node-id=1%3A11&scaling=min-zoom)
 
 Requirements:
-All lists and tasks are rendered on load/reload
+- All lists and tasks are rendered on load/reload
 Lists are displayed out in columns across the page
-Lists can be Created
-Lists and tasks each have a delete button
-List creation must include a title limited to 3-15 characters
-List creation must include a color picker or minimum 5 different colors
+- Lists can be Created
+- Lists and tasks each have a delete button
+- List creation must include a title limited to 3-15 characters
+- List creation must include a color picker or minimum 5 different colors
 Lists include a count of all tasks compared to uncompleted tasks
-Each List must have its own Task form
-Task title/body must be between 3-50 characters
-Tasks can be marked complete, this will persist on reload (checked attribute)
-Forms should not submit unless the fields adhere to the requirements
-Lists can be Deleted
-Tasks can be Deleted (separate from being marked complete)
+- Each List must have its own Task form
+- Task title/body must be between 3-50 characters
+- Tasks can be marked complete, this will persist on reload (checked attribute)
+- Forms should not submit unless the fields adhere to the requirements
+- Lists can be Deleted
+- Tasks can be Deleted (separate from being marked complete)
 Users are prompted to confirm any delete (search window.confirm)
 All Data persists through local storage
+
 Stretch Goals:
 Use something like masonry to render the lists more elegantly
 Use a better popup then window.confirm for a more clean user experience (see the SweetAlertJS 
