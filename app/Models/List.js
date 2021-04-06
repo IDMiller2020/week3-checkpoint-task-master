@@ -46,8 +46,10 @@ export default class List {
       console.log(`t.checked: ${t.checked}, ${t.text}`)
       if(t.checked) {
         template += t.CheckedTemplate
+
       } else {
         template += t.UncheckedTemplate
+
       }
     })
     return template

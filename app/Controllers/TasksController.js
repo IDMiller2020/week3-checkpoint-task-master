@@ -24,7 +24,6 @@ export default class TasksController {
     tasksService.deleteTask(id, listId)
   }
   checked(listId, id) {
-    console.log('Checkbox Clicked (TasksController)')
     tasksService.checked(listId, id)
   }
 

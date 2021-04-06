@@ -27,8 +27,10 @@ class TasksService {
     }
   }
   checked(listId, id) {
+
     console.log('Checkbox Clicked (TasksService)');
     console.log(`listId: ${listId} and id: ${id}`);
+    debugger
     ProxyState.tasks.forEach(t => {
       if (t.listId === listId && t.id === id) {
         if(!t.checked) {
@@ -36,9 +38,21 @@ class TasksService {
         } else {
           t.checked = false
         }
+        this.updateCompleted(listId, t.checked)
       }
       console.log(`${t.text} checked = ${t.checked}`)
       saveState()
+    })
+  }
+  updateCompleted(listId, checked) {
+    ProxyState.lists.forEach(l => {
+      if (l.id === listId) {
+        if (!checked && l.itemsComplete > 0) {
+          l.itemsComplete--
+        } else {
+          l.itemsComplete++
+        }
+      }
     })
   }
 }
